@@ -1,16 +1,9 @@
-const express = require('express');
+const api = require('./methods')
 
-const app = express();
+exports.handler = async (event, context) => {
 
-app.get('/', (req, res) => {
-  res.send('Hello Express app!');
-});
-
-app.get('/api', (req, res) => {
-  res.redirect(301, 'https://swapi.dev/api/planets/1/');
-});
-
-
-app.listen(3000, () => {
-  console.log('server started');
-});
+  return {
+    statusCode: 200,
+    body: event
+  }
+}
