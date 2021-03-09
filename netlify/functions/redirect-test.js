@@ -1,5 +1,3 @@
-const api = require('./methods')
-
 exports.handler = async (event, context) => {
 
   return {
